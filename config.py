@@ -9,6 +9,11 @@ class DefaultConfig(object):
     checkpoint = './Checkpoints'
     # 로그 저장 디렉토리 정의
     logs = './Logs'
+
+    # [ train 로그 결과 그래프 ]
+    # tensorboard --logdir=Logs --port=6006
+    # -> 위 명령어를 /home/username/NL 에서 실행
+
     # 테스트 결과 저장 경로 정의
     test_dir = './Result'
     # 데이터 출처 정의
@@ -26,6 +31,7 @@ class DefaultConfig(object):
     # train_data_root = r'H:\PAPER\paper writing\Noise learning\Simulate datasets'
     train_data_root = r'/home/jyounglee/NL_real/data/train'
     noise_mat_path = r'/home/jyounglee/NL_real/data/train/noise_data.mat'
+    raw_noise_base = r'/home/jyounglee/NL_real/data/given_data/noise_3siwafer'
 
     # 테스트 데이터 저장 경로
     # test_data_root = r'H:\PAPER\paper writing\Noise learning'
@@ -36,12 +42,14 @@ class DefaultConfig(object):
     # predict_root = r'H:\PAPER\paper writing\Noise learning\수정Revision\광학공간분해능\gaoyun\nanophoton\test'
     predict_root = r'/home/jyounglee/NL_real/data/predict'
     predict_save_root = r'/home/jyounglee/NL_real/data/predict_save'
+    raw_predict_base = r'/home/jyounglee/NL_real/data/given_data/3layer_on_siwafer'
 
     batch_predict_root = r'/home/jyounglee/NL_real/data/batch_predict'
-    batch_save_root = r'/home/jyounglee/NL_real/data/batch_save'
+    batch_save_root = r'/home/jyounglee/NL_real/Result'
+    rank_bg = 1
 
     batch_size = 64  # 배치 크기
-    print_freq = 50  # N 배치마다 정보 출력
+    print_freq = 50 # N 배치마다 정보 출력
     max_epoch = 500
     lr = 0.001  # 초기 학습률
     lr_decay = 0.7  # 검증 손실 증가 시, lr = lr * lr_decay

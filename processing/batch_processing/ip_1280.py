@@ -6,7 +6,7 @@ from scipy.interpolate import interp1d
 
 def merge_txt_to_single_key_mat_1280(
     base_dir = "/home/jyounglee/NL_real/data/given_data/3layer_on_siwafer",
-    out_mat  = "merged_spectra_1280.mat",
+    out_mat  = "/home/jyounglee/NL_real/data/batch_predict/merged_spectra_1280.mat",
     row_points = 1600,
     target_files = 1280
 ):
