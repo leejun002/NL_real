@@ -23,18 +23,18 @@
 -  os
 
 ## 2. Installation guide
-We recommend the users to install the python environment and relevant python packages via [Anaconda3](https://www.anaconda.com/download). 
+We recommend the users to install the python environment and relevant python packages via [Anaconda3](https://www.anaconda.com/dowNL_reaload). 
 
 The typical install time should be around one hour.
 
-After setup the running environment, download and unzip the code.
+After setup the running environment, dowNL_reaload and unzip the code.
 
 ## 3. Demo
-We provide Raman spectra dataset and pretrained AUnet model for model inferencing. Users can download them in the ***master*** branch of this repository.
+We provide Raman spectra dataset and pretrained AUnet model for model inferencing. Users can dowNL_reaload them in the ***master*** branch of this repository.
 
 **Steps for runding demo:**
 
-1. Download the pretrained AUnet model and Raman spectra dataset.
+1. DowNL_reaload the pretrained AUnet model and Raman spectra dataset.
 2. Set the model and test dataset path in the **config.py** script.
 3. Run the **main.py** in PyCharm (or other IDEs such as Vscode, Spyder, JupyterNotebook), you will obtain the denoised Raman spectra.
 
@@ -42,4 +42,4 @@ The default output is .mat file that can be directly loaded in Matlab for visual
 
 ## 4. Instructions for use
 
-# NL_real
+# NL_real_real

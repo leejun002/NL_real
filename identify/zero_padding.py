@@ -1,7 +1,7 @@
 import numpy as np
 
 # 예: txt 파일 읽기 (원본 1038행)
-data = np.loadtxt(r'/home/jyounglee/NL/data/predict/11.txt')  # shape: (1038, 2)
+data = np.loadtxt(r'/home/jyounglee/NL_real/data/predict/11.txt')  # shape: (1038, 2)
 
 num_original = data.shape[0]  # 1038
 target_length = 1600

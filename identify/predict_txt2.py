@@ -26,6 +26,6 @@ def save_spectrum_to_txt(mat_file, output_dir):
     print(f"Saved spectrum to {output_file}")
 
 # .mat 파일 경로와 저장할 디렉토리 설정
-mat_file_path = "/home/jyounglee/NL/data/predict/190607_FTC_Nthy_no1.mat"
-output_directory = "/home/jyounglee/NL/data/predict"
+mat_file_path = "/home/jyounglee/NL_real/data/predict/190607_FTC_Nthy_no1.mat"
+output_directory = "/home/jyounglee/NL_real/data/predict"
 save_spectrum_to_txt(mat_file_path, output_directory)

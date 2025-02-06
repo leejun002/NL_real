@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 데이터가 저장된 폴더 경로
-data_folder = '/home/jyounglee/NL/data/noise'
+data_folder = '/home/jyounglee/NL_real/data/noise'
 
 # 폴더 내 모든 .txt 파일 검색
 txt_files = [f for f in os.listdir(data_folder) if f.endswith('.txt')]

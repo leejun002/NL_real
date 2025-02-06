@@ -208,7 +208,7 @@ def test(config):
     # save_model_path = save_model_dir(config)
     model_file = os.path.join(config.test_model_dir, str(config.global_step) + '.pt')
     # 모델 파라미터 로드
-    state = torch.load(model_file, weights_only=True)
+    state = torch.load(model_file, weights_oNL_realy=True)
     model.load_state_dict({k.replace('module.', ''): v for k, v in state['model'].items()})
     # model.load_state_dict(state['model'])
     print('Successfully loaded The model saved at global step = {}'.format(state['global_step']))
@@ -343,7 +343,7 @@ def batch_predict(config):
     model_file = os.path.join(config.test_model_dir, str(config.global_step) + '.pt')
     # 모델 파라미터 로드
     # state = torch.load(model_file)
-    state = torch.load(model_file, weights_only=True)
+    state = torch.load(model_file, weights_oNL_realy=True)
     model.load_state_dict({k.replace('module.', ''): v for k, v in state['model'].items()})
     # model.load_state_dict(state['model'])
     print('Successfully loaded The model saved at global step = {}'.format(state['global_step']))

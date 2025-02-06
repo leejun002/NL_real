@@ -3,7 +3,7 @@ import scipy.io as sio
 import sys
 import os
 
-# 상위 폴더(NL)를 경로에 추가
+# 상위 폴더(NL_real)를 경로에 추가
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
 # Spectra_generator.py에서 spectra_generator 클래스 불러오기
@@ -40,6 +40,6 @@ def create_test_dataset(input_mat_file, output_mat_file):
 
 # 실행 예시
 if __name__ == "__main__":
-    input_mat_file = r'/home/jyounglee/NL/data/train/noise_dataset_2.mat'  # 입력 .mat 파일 경로
-    output_mat_file = r'/home/jyounglee/NL/data/test/test_dataset_2.mat'  # 출력 .mat 파일 경로
+    input_mat_file = r'/home/jyounglee/NL_real/data/train/noise_dataset_2.mat'  # 입력 .mat 파일 경로
+    output_mat_file = r'/home/jyounglee/NL_real/data/test/test_dataset_2.mat'  # 출력 .mat 파일 경로
     create_test_dataset(input_mat_file, output_mat_file)

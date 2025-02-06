@@ -1,5 +1,5 @@
 # import torch
-# state_dict = torch.load("./Noise-learning/562800.pt", weights_only=True)
+# state_dict = torch.load("./Noise-learning/562800.pt", weights_oNL_realy=True)
 # print(state_dict.keys())
 
 
@@ -41,7 +41,7 @@
 # model = MyModel()
 
 # # 저장된 가중치 로드
-# state_dict = torch.load(r'/home/jyounglee/NL/Noise-learning/562800.pt', weights_only=True)
+# state_dict = torch.load(r'/home/jyounglee/NL_real/Noise-learning/562800.pt', weights_oNL_realy=True)
 # model.load_state_dict(state_dict['model'], strict=False)  # strict=False로 일부 누락된 경우 무시
 
 import torch

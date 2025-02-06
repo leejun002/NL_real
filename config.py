@@ -13,37 +13,38 @@ class DefaultConfig(object):
     test_dir = './Result'
     # 데이터 출처 정의
     # Instrument = 'Hariba'
-    Instrument = 'raman_robust'
+    Instrument = 'isdtz_1280_1600'
     # 테스트할 모델 경로 (필요시 수정)
     # Hariba
     # test_model_dir = r'H:\Projects\Instrumental noise modeling\code\VA4\Checkpoints\Hariba\UNet_CA\batch_64'
     # Nanophoton
 
     # test_model_dir = r'H:\Projects\Instrumental noise modeling\code\VA4\Checkpoints\Nanophoton\UNet_CA\batch_64'
-    test_model_dir = r'/home/jyounglee/NL/Checkpoints/raman_robust/UNet_CA/batch_64'
+    test_model_dir = r'/home/jyounglee/NL_real/Checkpoints/isdtz_1280_1600/UNet_CA/batch_64'
 
     # 학습 데이터 저장 경로
     # train_data_root = r'H:\PAPER\paper writing\Noise learning\Simulate datasets'
-    train_data_root = r'/home/jyounglee/NL/data/train'
+    train_data_root = r'/home/jyounglee/NL_real/data/train'
+    noise_mat_path = r'/home/jyounglee/NL_real/data/train/noise_data.mat'
 
     # 테스트 데이터 저장 경로
     # test_data_root = r'H:\PAPER\paper writing\Noise learning'
-    test_data_root = r'/home/jyounglee/NL/data/test'
+    test_data_root = r'/home/jyounglee/NL_real/data/test'
 
     # 예측 데이터 저장 경로
     # predict_root = r'H:\PAPER\paper writing\Noise learning\데이터\TERS\20220721 PIC'
     # predict_root = r'H:\PAPER\paper writing\Noise learning\수정Revision\광학공간분해능\gaoyun\nanophoton\test'
-    predict_root = r'/home/jyounglee/NL/data/predict'
-    predict_save_root = r'/home/jyounglee/NL/data/predict_save'
+    predict_root = r'/home/jyounglee/NL_real/data/predict'
+    predict_save_root = r'/home/jyounglee/NL_real/data/predict_save'
 
-    batch_predict_root = r'/home/jyounglee/NL/data/batch_predict'
-    batch_save_root = r'/home/jyounglee/NL/data/batch_save'
+    batch_predict_root = r'/home/jyounglee/NL_real/data/batch_predict'
+    batch_save_root = r'/home/jyounglee/NL_real/data/batch_save'
 
     batch_size = 64  # 배치 크기
     print_freq = 50  # N 배치마다 정보 출력
     max_epoch = 500
     lr = 0.001  # 초기 학습률
-    lr_decay = 0.5  # 검증 손실 증가 시, lr = lr * lr_decay
+    lr_decay = 0.7  # 검증 손실 증가 시, lr = lr * lr_decay
 
     # 학습/테스트/예측 상태 정의
     is_training = False # training/pretrain 하나 선택
@@ -59,7 +60,7 @@ class DefaultConfig(object):
     # Hariba
     # Nanophoton
     # global_step = 850000
-    global_step = 1120
+    global_step = 10000
 
     # 검증 데이터셋 비율 정의
     valid_ratio = 20

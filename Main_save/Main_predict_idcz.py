@@ -153,7 +153,7 @@ def test(config):
     print('testing...')
     model = eval("{}(1,1)".format(config.model_name))
     model_file = os.path.join(config.test_model_dir, str(config.global_step) + '.pt')
-    state = torch.load(model_file, weights_only=True)
+    state = torch.load(model_file, weights_oNL_realy=True)
     model.load_state_dict({k.replace('module.', ''): v for k, v in state['model'].items()})
     print('Successfully loaded The model saved at global step = {}'.format(state['global_step']))
     model.eval()
@@ -208,7 +208,7 @@ def predict():
     # 모델 관련
     model_name = "UNet_CA"          # 사용할 모델 이름
     global_step = 10000             # 예시 global step (학습 시 저장된 모델 번호)
-    save_model_path = "/home/jyounglee/NL/noise_dp6/result/model"  # 저장된 모델 폴더 경로
+    save_model_path = "/home/jyounglee/NL_real/noise_dp6/result/model"  # 저장된 모델 폴더 경로
     model_file = os.path.join(save_model_path, f"{global_step}.pt")
 
     # 전처리 및 정규화 관련 파라미터
@@ -221,14 +221,14 @@ def predict():
     # train_std  = 7900.101090550069
     
     # 학습 시 저장된 .mat 파일에서 train_mean과 train_std 로드
-    noise_mat_path = "/home/jyounglee/NL/noise_data_processing/noise_dp6/result/noise_3siwafer_640x1600.mat"
+    noise_mat_path = "/home/jyounglee/NL_real/noise_data_processing/noise_dp6/result/noise_3siwafer_640x1600.mat"
     mat_data = sio.loadmat(noise_mat_path)
     train_mean = float(mat_data["train_mean"].ravel()[0])
     train_std  = float(mat_data["train_std"].ravel()[0])
 
     # 예측 데이터 관련 경로
-    predict_root = "/home/jyounglee/NL/predict_processing"            # 입력 txt 파일들이 있는 폴더
-    predict_save_root = "/home/jyounglee/NL/predict_processing/denoised"  # denoised 결과를 저장할 폴더
+    predict_root = "/home/jyounglee/NL_real/predict_processing"            # 입력 txt 파일들이 있는 폴더
+    predict_save_root = "/home/jyounglee/NL_real/predict_processing/denoised"  # denoised 결과를 저장할 폴더
     if not os.path.exists(predict_save_root):
         os.makedirs(predict_save_root)
 
@@ -310,7 +310,7 @@ def batch_predict(config):
     print('batch predicting...')
     model = eval("{}(1,1)".format(config.model_name))
     model_file = os.path.join(config.test_model_dir, str(config.global_step) + '.pt')
-    state = torch.load(model_file, weights_only=True)
+    state = torch.load(model_file, weights_oNL_realy=True)
     model.load_state_dict({k.replace('module.', ''): v for k, v in state['model'].items()})
     print('Successfully loaded The model saved at global step = {}'.format(state['global_step']))
     model.eval()

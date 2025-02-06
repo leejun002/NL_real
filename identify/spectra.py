@@ -54,7 +54,7 @@ def generate_raman_spectra_dataset(length, num_spectra, output_path):
 
 # Main
 if __name__ == "__main__":
-    output_file = r'/home/jyounglee/NL/data/predict/artificial_spectra_dataset.mat'  # 원하는 .mat 파일 경로
+    output_file = r'/home/jyounglee/NL_real/data/predict/artificial_spectra_dataset.mat'  # 원하는 .mat 파일 경로
     length = 1600  # Raman 스펙트럼 길이
     num_spectra = 100  # 생성할 스펙트럼의 수
     generate_raman_spectra_dataset(length, num_spectra, output_file)

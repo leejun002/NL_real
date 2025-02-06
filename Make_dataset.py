@@ -67,7 +67,7 @@ class Make_dataset(Dataset):
 
 if __name__ == '__main__':
     # path = r'E:\PAPER\paper writing\Noise learning\Simulate datasets'
-    path = r'/home/jyounglee/NL/data/Simulate_datasets'
+    path = r'/home/jyounglee/NL_real/data/Simulate_datasets'
     reader = Read_data(path, 20)
     train_set, _ = reader.read_file()
     print(train_set.shape)

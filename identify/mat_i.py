@@ -34,7 +34,7 @@ def resize_data(data, target_shape):
     return zoom(data, factors, order=1)  # 선형 보간 사용
 
 # 데이터 로드
-file_path = r'/home/jyounglee/NL/identify/190607_FTC_Nthy_no1.mat'
+file_path = r'/home/jyounglee/NL_real/identify/190607_FTC_Nthy_no1.mat'
 data = sio.loadmat(file_path)
 
 # 원본 데이터

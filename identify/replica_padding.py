@@ -1,6 +1,6 @@
 import numpy as np
 
-data = np.loadtxt(r'/home/jyounglee/NL/SI-wafer + #1 AuNPs (44nm)_1구역 +0.5M glycine_RamanShift__0__17-23-16-392.txt')
+data = np.loadtxt(r'/home/jyounglee/NL_real/SI-wafer + #1 AuNPs (44nm)_1구역 +0.5M glycine_RamanShift__0__17-23-16-392.txt')
 last_row = data[-1]  # e.g. [wave_end, intensity_end]
 pad_length = 1600 - data.shape[0]
 

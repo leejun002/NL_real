@@ -1,7 +1,7 @@
 import numpy as np
 
 # 원본
-data = np.loadtxt(r'/home/jyounglee/NL/data/noise/1/pico + glass 1_RamanShift__0__16-23-01-143.txt')
+data = np.loadtxt(r'/home/jyounglee/NL_real/data/noise/1/pico + glass 1_RamanShift__0__16-23-01-143.txt')
 wave = data[:, 0]
 intensity = data[:, 1]
 
